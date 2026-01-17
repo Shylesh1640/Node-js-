@@ -29,3 +29,5 @@ console.log(math.add(2,6));
 // console.log(path.parse(__filename));
 
 //node package manager - npm
+
+// node js has some missing api of javascript that we get in the browser
