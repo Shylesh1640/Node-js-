@@ -1,0 +1,37 @@
+{
+  "name": "dated",
+  "description": "a date format compiler",
+  "version": "0.1.0",
+  "author": "Eli Skeggs <skeggse@gmail.com>",
+  "main": "./lib/dated",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skeggse/dated.git"
+  },
+  "homepage": "https://github.com/skeggse/dated",
+  "bugs": "https://github.com/skeggse/dated/issues",
+  "keywords": [
+    "dated",
+    "date",
+    "time",
+    "timestamp",
+    "format",
+    "compile"
+  ],
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/skeggse/dated/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": "*"
+  }
+}
