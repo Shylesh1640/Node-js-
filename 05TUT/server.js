@@ -13,7 +13,7 @@ const myEmitter = new Emitter();
 const PORT = process.env.PORT || 3500;
 
 const server = http.createServer((req, res) => {
-  console.log(req.url, req.method);
+  console.log(req.url, req.method); 
 
   let contentType;
   //check file extension for content type
@@ -39,6 +39,15 @@ const server = http.createServer((req, res) => {
     default:
       contentType = 'text/html';  
   } 
+  
+  let filepath = 
+    contentType === 'text/html' && req.url === '/'  
+      ? path.join(__dirname, 'views', 'index.html')
+      : contentType === 'text/html' && req.url.slice(-1) === '/'  
+        ? path.join(__dirname, 'views', req.url, 'index.html')
+        : contentType === 'text/html'  
+          ? path.join(__dirname, 'views', req.url)
+          : path.join(__dirname, req.url);
 
 
 });
