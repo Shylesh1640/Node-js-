@@ -1,0 +1,27 @@
+{
+  "name": "04tut",
+  "version": "1.0.0",
+  "description": "Express Tutorial",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "d": "^1.0.2",
+    "date": "^2.0.6",
+    "date-fns": "^4.1.0",
+    "dated": "^0.1.0",
+    "express": "^5.2.1",
+    "fns": "^1.0.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
