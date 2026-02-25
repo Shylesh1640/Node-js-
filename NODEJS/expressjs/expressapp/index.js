@@ -14,7 +14,9 @@ app.get("/",(req,res) => {
 app.post("/",(req,res) => {
     res.status(200).send("Hello from POST request!");   
 });
-
+app.use((req,res,next) => {
+    res.status(404).send("Page not found.");
+});
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
 });
