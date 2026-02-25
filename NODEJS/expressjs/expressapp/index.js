@@ -4,9 +4,10 @@ const app = express();
 app.get("/",(req,res) => {
     res.status(200).send("Welcome to Express.js!");
 })
+//url http://localhost:5000/hello
 
-app.post("/submit",(req,res) => {
-    res.status(200).send("Form submitted successfully!");   
+app.post("/",(req,res) => {
+    res.status(200).send("Hello from POST request!");   
 });
 
 app.listen(5000, () => {
