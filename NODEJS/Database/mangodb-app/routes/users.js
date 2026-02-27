@@ -53,5 +53,19 @@ router.put('/:id', async (req, res) => {
 
 //json example for update - {"name":"Jane Doe", "email":"jane@example.com"}
 //delete a user
+router.delete('/:id', async (req, res) => {
+    try {
+        const deletedUser = await User.findByIdAndDelete(req.params.id);
+        if(deletedUser){
+            res.json({message: "User deleted successfully"});
+        } else {
+            res.status(404).json({message: "User not found"});
+        }
+    } catch (error) {
+        res.status(500).json({message: "Error deleting user"});
+    }
+});
+
+//curl url = http://localhost:3000/api/users/{id} -X DELETE
 
 module.exports = router;
