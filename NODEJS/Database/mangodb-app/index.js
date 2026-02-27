@@ -3,12 +3,11 @@ const db = require('./db');
 
 const app = express();
 const User = require('./models/User');
-//user routes
-//create a new user
-app.post('/api/users',(req, res) => {
-    const data = req.body;
-    console.log(data);
-});
+const userRoutes = require('./routes/users');
+
+
+app.use(express.json());
+app.use('/api/users', userRoutes);
 
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
